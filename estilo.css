@@ -1,0 +1,762 @@
+/* =========================
+   RESET GERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    background-color: #faf7f2;
+
+    color: #2f2226;
+
+    line-height: 1.8;
+
+    overflow-x: hidden;
+}
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+}
+
+ul {
+
+    list-style: none;
+}
+
+
+/* =========================
+   CONTAINER PADRÃO
+========================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+section {
+
+    padding: 120px 0;
+}
+
+
+/* =========================
+   MENU DE NAVEGAÇÃO
+========================= */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(250, 247, 242, 0.90);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #ece2d8;
+}
+
+.navbar {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 24px 0;
+}
+
+.logo {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: #8b2252;
+}
+
+.menu {
+
+    display: flex;
+
+    gap: 35px;
+}
+
+.menu a {
+
+    position: relative;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: 0.85rem;
+
+    color: #67555c;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+
+    color: #8b2252;
+}
+
+.menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #8b2252;
+
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+
+    width: 100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.hero-shape {
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(139, 34, 82, 0.08);
+
+    right: 10%;
+
+    top: 20%;
+}
+
+.hero-conteudo {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
+
+    text-align: center;
+}
+
+.hero-tag {
+
+    color: #8b2252;
+
+    letter-spacing: 5px;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 6rem;
+
+    line-height: 0.9;
+
+    margin-top: 20px;
+}
+
+.hero-linha {
+
+    width: 90px;
+
+    height: 2px;
+
+    background: #8b2252;
+
+    margin: 35px auto;
+}
+
+.hero h2 {
+
+    color: #67555c;
+
+    font-size: 1.3rem;
+
+    font-weight: 400;
+
+    margin-bottom: 25px;
+
+    min-height: 40px;
+}
+
+.hero p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #5b4a50;
+}
+
+.hero-botoes {
+
+    margin-top: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.botaoPrincipal,
+.botaoSecundario {
+
+    padding: 16px 30px;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.botaoPrincipal {
+
+    background: #8b2252;
+
+    color: white;
+
+    box-shadow: 0 10px 25px rgba(139, 34, 82, 0.15);
+}
+
+.botaoPrincipal:hover {
+
+    transform: translateY(-3px);
+
+    background: #9d295d;
+}
+
+.botaoSecundario {
+
+    border: 1px solid #ddd0c4;
+
+    color: #67555c;
+}
+
+.botaoSecundario:hover {
+
+    border-color: #8b2252;
+
+    color: #8b2252;
+}
+
+
+/* =========================
+   TÍTULOS DAS SEÇÕES
+========================= */
+
+.tituloSecao {
+
+    text-align: center;
+
+    margin-bottom: 80px;
+}
+
+.tituloSecao span {
+
+    color: #8b2252;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+}
+
+.tituloSecao h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 3.5rem;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobreGrid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.textoSobre p {
+
+    margin-bottom: 25px;
+
+    color: #5d4d53;
+}
+
+.cardSobre {
+
+    background: linear-gradient(
+        180deg,
+        #8b2252,
+        #732044
+    );
+
+    color: white;
+
+    padding: 45px;
+
+    border-radius: 24px;
+
+    box-shadow: 0 20px 45px rgba(139, 34, 82, 0.15);
+}
+
+.cardSobre div {
+
+    margin-bottom: 30px;
+}
+
+.cardSobre div:last-child {
+
+    margin-bottom: 0;
+}
+
+.cardSobre span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: 0.8rem;
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   FORMAÇÃO
+========================= */
+
+#formacao {
+
+    background: #f6f1eb;
+}
+
+.cardsFormacao {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.cardFormacao {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 24px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+
+    transition: 0.3s;
+}
+
+.cardFormacao:hover {
+
+    transform: translateY(-6px);
+}
+
+.ano {
+
+    color: #8b2252;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+}
+
+.cardFormacao h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    margin: 20px 0;
+}
+
+.instituicao {
+
+    color: #8b2252;
+
+    margin-bottom: 20px;
+}
+
+.listaAprendizados li {
+
+    position: relative;
+
+    padding-left: 20px;
+
+    margin-bottom: 12px;
+}
+
+.listaAprendizados li::before {
+
+    content: "●";
+
+    position: absolute;
+
+    left: 0;
+
+    color: #8b2252;
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================
+   PORTFÓLIO
+========================= */
+
+#projetos {
+
+    background: #f6f1eb;
+}
+
+.cardsProjetos {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.cardProjeto {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 24px;
+
+    border: 1px solid #ece2d8;
+
+    transition: 0.3s;
+}
+
+.cardProjeto:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+}
+
+.cardProjeto span {
+
+    color: #8b2252;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 0.75rem;
+}
+
+.cardProjeto h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    margin: 20px 0;
+}
+
+.tecnologiasProjeto {
+
+    margin-top: 25px;
+
+    color: #8b2252;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+}
+
+.destaque {
+
+    background: linear-gradient(
+        135deg,
+        #8b2252,
+        #6f1d42
+    );
+
+    color: white;
+}
+
+.destaque .tecnologiasProjeto,
+.destaque span {
+
+    color: rgba(255,255,255,0.85);
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contatoGrid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+}
+
+.infoContato h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 25px;
+}
+
+.infoContato p {
+
+    margin-bottom: 24px;
+}
+
+.formulario {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.formulario input,
+.formulario textarea {
+
+    padding: 18px;
+
+    border: 1px solid #e6dacf;
+
+    border-radius: 14px;
+
+    font-family: "Inter", sans-serif;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+
+    border-color: #8b2252;
+}
+
+.formulario button {
+
+    background: #8b2252;
+
+    color: white;
+
+    border: none;
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+
+    background: #a22b60;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    border-top: 1px solid #ece2d8;
+
+    color: #7a6870;
+}
+
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+.escondido {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition: 0.8s ease;
+}
+
+.mostrar {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .sobreGrid,
+    .cardsFormacao,
+    .cardsProjetos,
+    .contatoGrid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .hero h1 {
+
+        font-size: 4rem;
+    }
+
+    .hero-botoes {
+
+        flex-direction: column;
+    }
+
+    .tituloSecao h2 {
+
+        font-size: 3rem;
+    }
+
+}
